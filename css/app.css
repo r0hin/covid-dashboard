@@ -1,0 +1,43 @@
+.section1 {
+    height: 100%;
+    width: 25%;
+    background-color: var(--bg-secondary);
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+    padding: 12px;
+}
+
+.section2 {
+    height: 100%;
+    width: 80%;
+    background-color: var(--bg-primary);
+    position: absolute;
+    left: 25%;
+    bottom: 0px;
+    padding: 12px;
+}
+
+.section3 {
+    height: 90%;
+    width: 25%;
+    background-color: var(--bg-secondary);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 24px 0px 0px 24px;
+    padding: 12px;
+}
+
+.btn {
+    min-width: 12px;
+    border-radius: 12px;
+}
+
+.btn:active {
+    background: transparent
+}
+
+.btn:focus {
+    background: rgb(0, 0, 0, 0.2);
+}
