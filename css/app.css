@@ -2,7 +2,7 @@
     height: 100%;
     width: 25%;
     background-color: var(--bg-secondary);
-    position: absolute; 
+    position: fixed; 
     left: 0px;
     top: 0px;
     padding: 12px;
@@ -10,7 +10,7 @@
 
 .section2 {
     height: 100%;
-    width: 80%;
+    width: 75%;
     background-color: var(--bg-primary);
     position: absolute;
     left: 25%;
@@ -23,10 +23,10 @@
 }
 
 .section3 {
-    height: 90%;
+    height: 100%;
     width: 25%;
     background-color: var(--bg-secondary);
-    position: absolute;
+    position: fixed;
     right: 0px;
     bottom: 0px;
     border-radius: 24px 0px 0px 24px;
@@ -49,4 +49,75 @@
 #map {
     width: 100%; 
     height: 100%;
+}
+
+.nav-item {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nav-justified {
+    box-shadow: none;
+}
+
+.leading {
+    color: var(--content-primary)
+}
+
+.homeimg {
+    width: 100%;
+}
+
+.subtitle {
+    color: var(--content-secondary);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.list-group {
+    background-color: var(--bg-primary);
+    color: var(--content-primary);
+}
+.list-group-item {
+    background-color: var(--bg-tertiary);
+    color: var(--content-primary);
+}
+.list-group-item:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--content-primary);
+    cursor: default;
+}.list-group-item:active {
+    background-color: var(--bg-tertiary);
+    color: var(--content-primary);
+    cursor: default;
+}.list-group-item:focus {
+    background-color: var(--bg-tertiary);
+    color: var(--content-primary);
+    cursor: default;
+}
+
+
+.list-group-item:first-child {
+    border-radius: 18px 18px 0px 0px !important;
+}
+
+.list-group-item:last-child {
+    border-radius: 0px 0px 18px 18px !important;
+}
+.leadnum {
+    line-height: 0px;
+}
+
+.pfp1 {
+    width: 48px; 
+    height: 48px; 
+    border-radius: 26px;
+    object-fit: cover;
+}
+
+
+.modal-content {
+    background-color: var(--bg-primary);
+    color: var(--content-primary);
+    border-radius: 24px;
 }

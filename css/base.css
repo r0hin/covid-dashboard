@@ -16,6 +16,10 @@ body {
     font-family: 'Baloo Bhaina 2', cursive;
 }
 
+hr {
+    background-color: var(--content-secondary);
+}
+
 .card {
     background-color: var(--bg-tertiary);
     border-radius: 24px;
@@ -24,4 +28,8 @@ body {
 
 button {
     outline: none !important;
+}
+
+.eon-text {
+    text-decoration: none !important;
 }

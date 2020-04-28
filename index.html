@@ -10,7 +10,7 @@
     <!---==== CSS ====-->
     <!-- Eon Styles --><link rel="stylesheet" href="https://rohinarya12.github.io/eonstyles/new/eon.css">
     <!-- Animate --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- Material Icons --><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet"> 
     <!-- Font --><link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&display=swap" rel="stylesheet">
     <!-- Dameonite / Bootstrap--><link rel="stylesheet" href="daemonite/material.min.css">
     <!-- Waves --><link rel="stylesheet" href="daemonite/waves.min.css">
@@ -26,6 +26,16 @@
 
     <div class="modal fade bd-example-modal-sm" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-header"><h3>Error</h3></div><h5 id="erorrModalMsg" class="modal-body">Unable to complete process.</h5><div class="modal-footer"><button type="button" class="waves btn-old-text" data-dismiss="modal">dismiss</button></div></div></div></div>
     <div style="z-index: 20000049108509173268563785623467823478623478278997819871982498714;" class="modal fade bd-example-modal-sm" id="eonloaderelement" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-sm modal-dialog-centered" role="document"><div style="display: inline-block; border-radius: 400px; width: 150px" class="modal-content centered"><div class="modal-body"><center><div class="progress-circular"><div class="progress-circular-wrapper"><div class="progress-circular-inner"><div class="progress-circular-left"><div class="progress-circular-spinner"></div></div><div class="progress-circular-gap"></div><div class="progress-circular-right"><div class="progress-circular-spinner"></div></div></div></div></div></center></div></div></div></div>
+
+    <div class="modal fade bd-example-modal-lg" id="signmodal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg" role="document"><div class="modal-content">
+        <div class="modal-body">
+            <center><h2 id="accountmodaltitle">Account</h2>
+            <br><br>
+        <div id="unsigned"></div>
+        <div id="signed"></div>
+
+        </div>
+    </div></div></div>
 
 <!-- ===========================--] Content [=================================== -->
     <div class="section1">
@@ -68,34 +78,71 @@
     </div>
     <div class="section2">
 
-        <nav class="navbar navbar-dark">
-            more icons
+        <nav style="width: 100%;" class="navbar navbar-dark">
+            <ul class="nav" id="justifiedTab" role="tablist">
+                <li>
+                  <a aria-controls="home" aria-selected="true" class="eon-text active" data-toggle="tab" href="#home" id="home-tab" role="tab"><i class="material-icons-round">home</i></a>
+                </li>
+                <li class="nav-item">
+                  <a aria-controls="profile" aria-selected="false" class="eon-text" data-toggle="tab" href="#profile" id="profile-tab" role="tab"><i class="material-icons-round">map</i></a>
+                </li>
+                <li class="nav-item">
+                  <a aria-controls="contact" aria-selected="false" class="eon-text" data-toggle="tab" href="#contact" id="contact-tab" role="tab"><i class="material-icons-round">person</i></a>
+                </li>
+              </ul>
             <ul class="navbar-nav mr-auto">
+                
             </ul>
         </nav>
 
         <div class="section2content">
+            <div class="tab-content" id="justifiedTabContent">
+                <div aria-labelledby="home-tab" class="tab-pane fade show active" id="home" role="tabpanel">
 
+<h1 class="leading">Home</h1>
 
+<div class="row">
+    <div class="col-sm">
+        <img class="homeimg animated pulse infinite" src="https://www.stickpng.com/assets/images/5bd08abf7aaafa0575d8502b.png" alt="">
+    </div>
+    <div class="col-sm">
+<br>
+        <h3 class="subtitle">Global Information</h3>
+        <br>
+        ok
+    </div>
+</div>
 
+<div id="countriesfavourite" class="list-group"></div>
 
-        <!-- <div id='map'></div> -->
+<div id="countries" class="list-group">
     
+  </div>
+                </div>
+                <div aria-labelledby="profile-tab" class="tab-pane fade" id="profile" role="tabpanel">...</div>
+                <div aria-labelledby="contact-tab" class="tab-pane fade" id="contact" role="tabpanel">...</div>
+              </div>
+        <!-- <div id='map'></div> -->
     </div>
     </div>
     <div class="section3">
         <nav class="navbar navbar-dark">
-            user stuff
+            <div id="navstuff"><img style="display: none"class="pfp1 animated zoomIn" id="pfp1" src="https://cdn.clipart.email/30f0146e28ba06a53e45c143720ab81a_patch-user-profile-for-stanford-daily_600-600.png" alt="">
+            <h4 class="animated fadeInUp" style="display: none;" id="name1" style="padding-left: 8px; display: inline-block;"> Display Name</h4>
+            </div>
+            <button id="thebutton" style="display: none; line-height: 0px; padding-top: 16px !important; padding-bottom: 12px !important;" class="eon-outlined animated fadeInRight">
+                
+            </button>
             <ul class="navbar-nav mr-auto">
             </ul>
+            <button onclick="setlang()" class="eon-text" style="line-height: 0px; padding-top: 16px !important; padding-bottom: 12px !important;"><i class="material-icons">language</i></button>
         </nav>
-        discussion
     
     </div>
 
 <!-- ===========================--] /Content [=================================== -->
     <!---==== JavaScript ====--->
-    <!-- JQuery --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- JQuery --><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Popper --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- Bootstrap --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <!-- Eon Styles --><script src="https://rohinarya12.github.io/eonstyles/new/eon.js"></script>
@@ -104,6 +151,17 @@
     <!-- Snackbar --><script src="daemonite/snackbar.min.js"></script><style>.snackbar-container {padding-top: 8px !important;padding-bottom: 8px !important;border-radius: 8px !important;max-width: 8723789253786352614975678392738649502976483528059748327952px;}</style>
     <!-- Leaflet --> <script src='https://unpkg.com/leaflet@1.4.0/dist/leaflet.js'></script>
     
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
     <!-- Map<script src="js/map.js"></script> -->
+    <!-- Get Stats --><script src="js/stats.js"></script>
+    <!-- Firebase Loader --><script src="js/firebase.js"></script>
+    <!-- News --><script src="js/news.js"></script>
+
+    
+    
 </body>
 </html>
