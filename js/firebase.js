@@ -20,6 +20,20 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById('pfp1').style.display = 'inline-block'
         document.getElementById('name1').innerHTML = user.displayName
 
+
+        document.getElementById('signed').style.display = 'block'
+        document.getElementById('unsigned').style.display = 'none'
+
+        window.setTimeout(function() {
+            document.getElementById('loader').classList.add('animated')
+            document.getElementById('loader').classList.add('fadeOut')
+            document.getElementById('rocket').classList.add('animated')
+            document.getElementById('rocket').classList.add('fadeOutUpBig')
+            window.setTimeout(function() {
+                $('#loader').remove()
+            }, 500)
+        }, 1000)
+
     } else {
         document.getElementById('name1').style.display = 'none'
         document.getElementById('pfp1').style.display = 'none'
@@ -28,6 +42,24 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById('thebutton').onclick = function() {
             $('#signmodal').modal('toggle')
         }
+        document.getElementById('signed').style.display = 'none'
+        document.getElementById('unsigned').style.display = 'block'
+
+        window.setTimeout(function() {
+            document.getElementById('rocket').classList.add('animated')
+            document.getElementById('dynamicstyle1').innerHTML = ''
+            document.getElementById('rocket').classList.add('fadeOutUpBig')
+            window.setTimeout(function() {
+                document.getElementById('loader').classList.add('animated')
+                document.getElementById('loader').classList.add('fadeOut')
+                window.setTimeout(function() {
+                    $('#loader').remove()
+                }, 500) 
+            }, 1000)
+        }, 1000)
+
+        
+        
 
     }
 });
