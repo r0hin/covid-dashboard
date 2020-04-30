@@ -9,8 +9,19 @@ var settings = {
 	}
 }
 
+// kc ku
+
 $.ajax(settings).done(function (response) {
-    console.log(response.response[4]);
+
+//     let data = { "2010-01": { "item1": 324, "item2": 1075, "item3": 940, "item4": 441, "item5": 1040, "item6": 898, "item7": 1343 }, "2011-02": { "item1": 295, "item2": 958, "item3": 904, "item4": 434, "item5": 1038, "item6": 793, "item7": 1246 }, "2012-03": { "item1": 314, "item2": 1062, "item3": 980, "item4": 494, "item5": 1158, "item6": 914, "item7": 1461 }, "2008-04": { "item1": 336, "item2": 1022, "item3": 987, "item4": 488, "item5": 1014, "item6": 792, "item7": 1382 }, "2007-05": { "item1": 332, "item2": 1073, "item3": 1002, "item4": 512, "item5": 1104, "item6": 840, "item7": 1368 }, "2005-06": { "item1": 311, "item2": 981, "item3": 837, "item4": 432, "item5": 1002, "item6": 801, "item7": 1265 }, "2014-07": { "item1": 321, "item2": 1049, "item3": 921, "item4": 489, "item5": 963, "item6": 881, "item7": 1340 }, "2015-08": { "item1": 294, "item2": 1071, "item3": 960, "item4": 506, "item5": 910, "item6": 885, "item7": 1312 }, "2016-09": { "item1": 281, "item2": 1020, "item3": 952, "item4": 502, "item5": 1068, "item6": 914, "item7": 1397 }, "2009-10": { "item1": 319, "item2": 1058, "item3": 985, "item4": 546, "item5": 1184, "item6": 1031, "item7": 1448 }, "2005-11": { "item1": 300, "item2": 1021, "item3": 967, "item4": 474, "item5": 1176, "item6": 1009, "item7": 1387 }, "2017-12": { "item1": 307, "item2": 1027, "item3": 924, "item4": 427, "item5": 1024, "item6": 844, "item7": 1300 } };
+// // ----------------
+// let byThis = 'cases.value';
+// let compare = (k, kk) => response[k][byThis] - response[kk][byThis];
+
+// let sorted = Object.keys(data).sort(compare).reduce((a, d) => ({ ...a, ...{ [d]: data[d] } }), {});
+
+// console.log(sorted);
+
     for (let i = 0; i < response.response.length; i++) {
         const element = response.response[i];
 
