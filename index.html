@@ -33,38 +33,7 @@
 <body id="body">
     <!-- Preflight Modals-->
 
-
-<div id="loader">
-    <div id="rocket" class="rocket">
-        <div class="rocket-body">
-          <div class="body"></div>
-          <div class="fin fin-left"></div>
-          <div class="fin fin-right"></div>
-          <div class="window"></div>
-        </div>
-        <div class="exhaust-flame"></div>
-        <ul class="exhaust-fumes">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <ul class="star">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-</div>
+<div id="loader"><div id="rocket" class="rocket"><div class="rocket-body"><div class="body"></div><div class="fin fin-left"></div><div class="fin fin-right"></div><div class="window"></div></div><div class="exhaust-flame"></div><ul class="exhaust-fumes"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><ul class="star"><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div></div>
 
 
     <div class="modal fade bd-example-modal-sm" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-header"><h3>Error</h3></div><h5 id="erorrModalMsg" class="modal-body">Unable to complete process.</h5><div class="modal-footer"><button type="button" class="waves btn-old-text" data-dismiss="modal">dismiss</button></div></div></div></div>
@@ -87,6 +56,31 @@
 
         </div>
     </div></div></div>
+
+    <div class="modal fade" id="newsmodal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content">
+        <div class="modal-body">
+
+            <img src="" class="newsbanner" id="newsbanner" alt="">
+            <br><br>
+
+            <center><h2 id="newstitle"></h2></center>
+            <br><br>
+            <h5><b>Description</b></h5>
+            <h5 id="newsdescription"></h5>
+            <br>
+            <p><b>Content</b></p>
+<p id="newscontent"></p>
+<center>
+<span class="chip" id="newsdate"></span><div style="display: inline-block; padding: 2px;"></div><span class="chip" id="newsauthor"></span>
+
+<br><br><hr> <br><br>
+
+    <button onclick="closenews()" class="eon-text">close</button><div style="display: inline-block; padding: 2px;"></div><button id="newsbutton" class="eon-contained">view article</button>
+</center>
+
+        </div>
+    </div></div></div>
+
 
 <!-- ===========================--] Content [=================================== -->
     <div class="section1">
@@ -116,12 +110,14 @@
     
     
         <br><br>
-        <div class="card">
+        <div class="card newscontainer">
             <div class="card-body">
     
-                <h3>Corona News Feed</h3>
-                <br><br><br><br>
-                <br><br><br><br>
+                <h3>Corona News Feed </h3>
+                    <div class="alert alert-info" role="alert">
+                        Refreshes in aprox. 15 minute intervals.
+                      </div>
+                <div id="news"></div>
             </div>
         </div>
     

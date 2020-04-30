@@ -35,6 +35,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         }, 1000)
 
     } else {
+        window.user = false
+
         document.getElementById('name1').style.display = 'none'
         document.getElementById('pfp1').style.display = 'none'
         document.getElementById('thebutton').style.display = 'inline-block'

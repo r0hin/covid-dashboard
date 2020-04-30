@@ -1,3 +1,18 @@
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://covid19-data.p.rapidapi.com/geojson-ww",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "covid19-data.p.rapidapi.com",
+		"x-rapidapi-key": "f25776e273mshdeac69e2098339fp19fd7bjsne2f245613497"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response.features);
+});
+
 var points = [
     ["ZANZIBAR",-6.13, 39.31],
     ["TOKYO",35.68, 139.76],
