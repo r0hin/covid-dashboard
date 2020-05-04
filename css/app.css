@@ -147,6 +147,18 @@
 }
 
 
+.newscard {
+    background-color: var(--bg-secondary)
+}
 
+.newscontainer {
+    height: 50%;
+    overflow: scroll;
+}
 
- 
+.newsbanner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
