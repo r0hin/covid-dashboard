@@ -141,7 +141,8 @@
     -webkit-text-fill-color: transparent;
 }
 
-#map {
+
+#mapid {
     height: 500px;
     width: 100%;
 }
