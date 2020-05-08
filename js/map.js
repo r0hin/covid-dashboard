@@ -6,3 +6,5 @@ function initMap() {
   });
 }
 
+map.data.loadGeoJson('google.json');
+
