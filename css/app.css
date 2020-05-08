@@ -141,13 +141,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-
-#mapid {
-    height: 500px;
-    width: 100%;
-}
-
-
 .newscard {
     background-color: var(--bg-secondary)
 }
@@ -162,4 +155,11 @@
     max-height: 300px;
     object-fit: cover;
     border-radius: 12px;
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 450px;
+  width: 100%;
 }
