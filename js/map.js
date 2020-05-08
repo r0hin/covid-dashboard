@@ -6,5 +6,7 @@ function initMap() {
   });
 }
 
-map.data.loadGeoJson('google.json');
+geojson = []
+
+map.data.loadGeoJson(geojson);
 
