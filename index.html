@@ -14,6 +14,7 @@
     <!-- Font --><link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&display=swap" rel="stylesheet">
     <!-- Dameonite / Bootstrap--><link rel="stylesheet" href="daemonite/material.min.css">
     <!-- Waves --><link rel="stylesheet" href="daemonite/waves.min.css">
+    <!-- Chart--> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
     <!-- Dynamic style 1--> <style id="dynamicstyle1">
         .rocket {
             width: 80px;
@@ -91,9 +92,8 @@
         <div class="card">
             <div class="card-body">
     
-                <h3>Global Curve</h3>
-                <p>Card body</p>
-                <br><br><br><br>
+                <h3>Past Week</h3>
+                <canvas height="200" id="myChart"></canvas>
             </div>
         </div>
     
@@ -209,6 +209,7 @@
     <!-- Daemonite --><script src="daemonite/material.min.js"></script>
     <!-- Waves --><script src="daemonite/waves.min.js"></script><script>addWaves();function addWaves(){ Waves.attach('.eon-contained', ['waves-button', 'waves-light']);Waves.attach('.eon-outlined', ['waves-button']);Waves.attach('.eon-text', ['waves-button']);var config = {duration: 250}; Waves.init(config);}</script>
     <!-- Snackbar --><script src="daemonite/snackbar.min.js"></script><style>.snackbar-container {padding-top: 8px !important;padding-bottom: 8px !important;border-radius: 8px !important;max-width: 8723789253786352614975678392738649502976483528059748327952px;}</style>
+    <!-- Chart --> <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
