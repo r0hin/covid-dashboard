@@ -1,170 +1,213 @@
-.section1 {
-    height: 100%;
-    width: 25%;
-    background-color: var(--bg-secondary);
-    position: fixed; 
+#sidebar {
+    padding: 24px;
+    background-color: var(--bg-primary);
+    width: 200px;
     left: 0px;
     top: 0px;
-    padding: 12px;
-}
-
-.section2 {
     height: 100%;
-    width: 50%;
-    background-color: var(--bg-primary);
-    padding: 12px;
-}
-
-.section2content {
-    width: 100%;
-    position: relative;
-}
-
-.section3 {
-    height: 100%;
-    width: 25%;
-    background-color: var(--bg-secondary);
     position: fixed;
-    right: 0px;
-    bottom: 0px;
-    border-radius: 24px 0px 0px 24px;
-    padding: 12px;
+    z-index: 12;
 }
 
-.btn {
-    min-width: 12px;
-    border-radius: 12px;
-}
-
-.btn:active {
-    background: transparent
-}
-
-.btn:focus {
-    background: rgb(0, 0, 0, 0.2);
-}
-
-.nav-item {
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-.nav-justified {
-    box-shadow: none;
-}
-
-.leading {
-    color: var(--content-primary)
-}
-
-.homeimg {
+#sidebarcontent {
+    background-color: var(--bg-secondary);
+    height: 100%;
     width: 100%;
-}
-
-.subtitle {
-    color: var(--content-secondary);
-    font-size: 24px;
-    font-weight: 800;
-}
-
-.list-group {
-    background-color: var(--bg-primary);
-    color: var(--content-primary);
-}
-.list-group-item {
-    background-color: var(--bg-tertiary);
-    color: var(--content-primary);
-}
-.list-group-item:hover {
-    background-color: var(--bg-tertiary);
-    color: var(--content-primary);
-    cursor: default;
-}.list-group-item:active {
-    background-color: var(--bg-tertiary);
-    color: var(--content-primary);
-    cursor: default;
-}.list-group-item:focus {
-    background-color: var(--bg-tertiary);
-    color: var(--content-primary);
-    cursor: default;
-}
-
-
-.list-group-item:first-child {
-    border-radius: 18px 18px 0px 0px !important;
-}
-
-.list-group-item:last-child {
-    border-radius: 0px 0px 18px 18px !important;
-}
-.leadnum {
-    line-height: 0px;
-}
-
-.pfp1 {
-    width: 48px; 
-    height: 48px; 
-    border-radius: 26px;
-    object-fit: cover;
-}
-
-
-.modal-content {
-    background-color: var(--bg-primary);
-    color: var(--content-primary);
     border-radius: 24px;
 }
 
-@keyframes infinite-spinning {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+.logo1 {
+    top: 40px;
+    width: 38%;
+}
+
+.tabs {
+    width: 100%;
+}
+
+
+.navbarbuttontext {
+    display: inline-block;
+    padding-left: 52px;
+    color: var(--content-secondary);
+    font-weight: 400;
+    margin: 0;
+}
+
+.navbarbuttontextactive {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--content-primary);
+    padding-left: 52px;
+    margin: 0;
+}
+
+.iconinactive {
+    color: var(--content-secondary);
+}
+
+.iconactive {
+    background-image: linear-gradient(270deg, var(--eon-primary), var(--eon-secondary));
+    padding: 6px;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;   
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: 0px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
   }
 
-#loader {
-    position: fixed;
-    width: 100%;
+  .overlaypadding {
+    padding: 24px 12px 24px 24px !important;
+  }
+  
+  .overlaycontent {
+    background-color: var(--bg-secondary);
+    border-radius: 24px;
+
     height: 100%;
+    width: 100%;
     top: 0px;
     left: 0px;
-    z-index: 209031283123;
-    backdrop-filter: blur(24px);
   }
 
-.loadingtext {
-    font-size: 72px;
-    background: -webkit-linear-gradient(rgb(255, 0, 255), rgb(0, 4, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+  #tabs {
+    transition: all .5s;
+    padding: 16px;
+  }
+  
+  .chatbtn {
+    padding: 12px !important;
+    min-width: 0 !important;    
+    border-radius: 24px !important;
 
-.newscard {
-    background-color: var(--bg-secondary)
-}
+    position: fixed !important;
+    bottom: 36px !important;
+    right: 0px !important;
+    
+    z-index: 200;
+    transition: all 1.5s !important;
+  }
 
-.newscontainer {
-    height: 50%;
-    overflow: scroll;
-}
+  .chatbtn:hover {
+      z-index: 200;
+  }
 
-.newsbanner {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
+  .chatbtnactive {
+    z-index: 200;
+    right: 262px !important;
+  }
 
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
-#map {
-  height: 450px;
-  width: 100%;
-}
+  .marginshit {
+    width: 244px;
 
-#myChart {
-    width: 100%;
     height: 100%;
+    margin: 0em;
+  }
+
+  .bottombar {
+      bottom: 44px;
+      width: 87%;
+
+      position: absolute;
+
+      padding-left: 8px;
+      padding-right: 8px;
+  }
+
+  .bottombar2 {
+    bottom: 44px;
+    width: 76%;
+
+    position: absolute;
+
+    padding-left: 8px;
+    padding-right: 8px;
 }
+
+  .form-control {
+      color: var(--content-primary)
+  }
+
+  .floating-label label {
+      color: grey;
+  }
+
+  .pfp1 {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 14px;
+  }
+
+  .pfptext {
+      line-height: 0px;
+      display: inline-block;
+  }
+
+  .pfp2 {
+    border-radius: 1200px; 
+    height: 32px; 
+    width: 32px; 
+    object-fit: cover; 
+    display: inline-block;
+  }
+
+  .chatdivider1 {
+    padding-left: 24px; 
+    width: 100%; 
+    display: inline-block;
+  }
+
+  .chattext {
+    text-align: left; 
+    max-width: 90%; 
+    padding: 12px; 
+    border-radius: 12px;
+  }
+
+  .chattext2 {
+    max-width: 80%;
+    margin: 0;
+  }
+
+  .chattext3 {
+      display: inline-block;
+  }
+
+  .messageelement {
+      position: relative;
+      padding-left: 6px;
+      padding-right: 6px;
+      color: var(--content-primary)
+  }
+
+  #messages {
+    height: 100%;
+    margin: 0em;
+    overflow-y: auto;
+  }
+
+  .inline {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .chatinfobtn {
+    min-width: 0px !important;
+    padding: 8px !important;
+    bottom: 3px;
+  }

@@ -1,0 +1,165 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---==== Meta ====--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV 2020 Dashboard - Y9 Design Project</title>
+
+    <!---==== CSS ====-->
+    <!-- Eon Styles --><link rel="stylesheet" href="https://rohinarya12.github.io/eonstyles/new/eon.css">
+    <!-- Animate --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Material Icons --><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <!-- Font --><link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Dameonite / Bootstrap--><link rel="stylesheet" href="daemonite/material.min.css">
+    <!-- Waves --><link rel="stylesheet" href="daemonite/waves.min.css">
+    <!-- Snackbar --><link rel="stylesheet" href="daemonite/snackbar.min.css">
+
+    <!-- Base CSS--> <link rel="stylesheet" href="css/base.css">
+    <!-- App CSS--> <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body id="body">
+    <!-- Preflight Modals-->
+
+    <div class="modal fade bd-example-modal-sm" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-header"><h3>Error</h3></div><h5 id="erorrModalMsg" class="modal-body">Unable to complete process.</h5><div class="modal-footer"><button type="button" class="waves btn-old-text" data-dismiss="modal">dismiss</button></div></div></div></div>
+    <div style="z-index: 20000049108509173268563785623467823478623478278997819871982498714;" class="modal fade bd-example-modal-sm" id="eonloaderelement" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-sm modal-dialog-centered" role="document"><div style="display: inline-block; border-radius: 400px; width: 150px" class="modal-content centered"><div class="modal-body"><center><div class="progress-circular"><div class="progress-circular-wrapper"><div class="progress-circular-inner"><div class="progress-circular-left"><div class="progress-circular-spinner"></div></div><div class="progress-circular-gap"></div><div class="progress-circular-right"><div class="progress-circular-spinner"></div></div></div></div></div></center></div></div></div></div>
+
+<!-- ===========================--] Content [=================================== -->
+    
+<div id="sidebar"><div class="shadow" id="sidebarcontent">
+<img class="logo1 centeredx" src="assets/icon.png" alt="">
+
+<br><br><br><br><br>
+    <center><h4 class="content">CV Dashboard</h4></center>
+</br>
+
+<div class="centered">
+    <div style="padding: 12px;" class="nav" id="justifiedTab" role="tablist">
+    <a onclick="tabe('home')" aria-controls="home" aria-selected="false" data-toggle="tab" href="#home" id="home-tab" role="tab" class="eon-text iconinactive">
+        <i id="home-icon" class="material-icons iconinactive">whatshot</i>
+    </a>
+    <br><br>
+    <a onclick="tabe('data')" aria-controls="data" aria-selected="false" data-toggle="tab" href="#data" id="data-tab" role="tab" class="eon-text iconinactive" href="">
+        <i id="data-icon" class="material-icons iconinactive">insert_chart</i>
+    </a>
+    <br><br>
+    <a onclick="tabe('map')" aria-controls="map" aria-selected="false" data-toggle="tab" href="#map" id="map-tab" role="tab" class="eon-text iconinactive" href="">
+        <i id="map-icon" class="material-icons iconinactive">map</i>
+    </a>
+    <br><br>
+    <a onclick="tabe('news')" aria-controls="news" aria-selected="false" data-toggle="tab" href="#news" id="news-tab" role="tab" class="eon-text iconinactive" href="">
+        <i id="news-icon" class="material-icons iconinactive">book</i>
+    </a>
+    <br><br>
+    <a onclick="tabe('list')" aria-controls="list" aria-selected="false" data-toggle="tab" href="#list" id="list-tab" role="tab" class="eon-text iconinactive" href="">
+        <i id="list-icon" class="material-icons iconinactive">view_list</i>
+    </a>
+    <br><br>
+    <a onclick="tabe('info')" aria-controls="info" aria-selected="false" data-toggle="tab" href="#info" id="info-tab" role="tab" class="eon-text iconinactive" href="">
+        <i id="info-icon" class="material-icons iconinactive">notes</i>
+    </a>
+    </div>
+</div>
+
+<div class="bottombar2">
+    
+        <div style="display: none;" id="usercardtrue" class="card animated fadeIn">
+            <div class="card-body">
+                <center>
+                    <img id="pfp1" class="pfp1" src="https://lh3.googleusercontent.com/-QIxqknvU8S8/AAAAAAAAAAI/AAAAAAAABDM/d-jCR6EPNOEui33AQoMEzffnwgNPxly3QCLcDEAE/s32-c-k-no/photo.jpg" alt="">
+                    <br>
+                    <p id="pfptext" class="pfptext">Rohin Arya</p>
+                    <button onclick="signout()" class="eon-text"><i class="material-icons">power_settings_new</i></button>
+                </center>
+            </div>
+        </div>
+        <div style="display: none;" id="usercardfalse" class="card animated fadeIn">
+            <div class="card-body">
+                <center>
+                    <button onclick="signin()" class="eon-text">Sign In</button>
+                </center>
+            </div>
+        </div>
+</div>
+
+</div></div>
+
+
+<div style="margin-right: 250px;" id="tabs">
+    <div class="tab-content" id="justifiedTabContent">
+        <div aria-labelledby="home-tab" class="tab-pane fade" id="home" role="tabpanel">
+
+        </div>
+        <div aria-labelledby="data-tab" class="tab-pane fade" id="data" role="tabpanel">
+            data
+        </div>
+        <div aria-labelledby="map-tab" class="tab-pane fade" id="map" role="tabpanel">
+            map
+        </div>
+        <div aria-labelledby="news-tab" class="tab-pane fade" id="news" role="tabpanel">
+            news
+        </div>
+        <div aria-labelledby="list-tab" class="tab-pane fade" id="list" role="tabpanel">
+            list
+        </div>
+        <div aria-labelledby="info-tab" class="tab-pane fade" id="info" role="tabpanel">
+            info
+        </div>
+    </div>
+
+</div>
+
+<button style="transition: all 0.5s !important;" id="chatbtn" class="eon-text chatbtn chatbtnactive" onclick="closeNav()">
+<i id="chatbtnicon" class="material-icons">keyboard_arrow_right</i>
+</button>  
+
+<div style="width: 280px;" class="overlay overlaypadding" id="overlaychat">
+    <div class="shadow-sm overlaycontent">
+        <div class="marginshit">
+            <br>
+            <center>
+                <h3 class="content inline">Chat</h3> <button data-toggle="popover" data-trigger="focus" title="CV Dashboard Chat" data-content="This is a place for users to come together to discuss current issues such as COVID-19 and other related issues. Please follow the rules. Press enter in the message field to send a message. You must be signed in to use this feature. " class="chatinfobtn eon-text"><i class="material-icons">info</i></button>
+                <p class="content2">Use this to discuss current issues with other users.</p>
+                <div id="messages">
+                </div>
+            </center>
+
+            <div class="bottombar">
+                <div style="width: 100%;" class="floating-label textfield-box">
+                    <label for="msgbox">Send Message</label>
+                    <input class="form-control" id="msgbox" placeholder="" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ===========================--] /Content [=================================== -->
+    <!---==== JavaScript ====--->
+    <!-- JQuery --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Bootstrap --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- Eon Styles --><script src="https://rohinarya12.github.io/eonstyles/new/eon.js"></script>
+    <!-- Daemonite --><script src="daemonite/material.min.js"></script>
+    <!-- Waves --><script src="daemonite/waves.min.js"></script><script>addWaves();function addWaves(){ Waves.attach('.eon-contained', ['waves-button', 'waves-light']);Waves.attach('.eon-outlined', ['waves-button']);Waves.attach('.eon-text', ['waves-button']);var config = {duration: 250}; Waves.init(config);}</script>
+    <!-- Snackbar --><script src="daemonite/snackbar.min.js"></script><style>.snackbar-container {padding-top: 8px !important;padding-bottom: 8px !important;border-radius: 8px !important;max-width: 8723789253786352614975678392738649502976483528059748327952px;}</style>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtQWVotdypyMEttsTUpg5MA9JW7jUuyck&callback=initMap"
+    async defer></script> -->
+
+    <!-- Firebase Loader --><script src="js/firebase.js"></script>
+    <!-- Chat --><script src="js/chat.js"></script>
+    <!-- Tabs ig (modfied from eonnect)--><script src="js/tabs.js"></script>
+</body>
+</html>
