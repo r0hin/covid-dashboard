@@ -12,11 +12,11 @@ firebase.initializeApp(firebaseConfig);
 db = firebase.firestore()
 
 firebase.auth().onAuthStateChanged(function (user) {
+    loadmessages()
     if (user) {
 
         window.user = firebase.auth().currentUser
         loadprofile(true)
-        loadmessages()
 
     } else {
         window.user = false

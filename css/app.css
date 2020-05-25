@@ -211,3 +211,7 @@
     padding: 8px !important;
     bottom: 3px;
   }
+
+  .tab-pane {
+    color: var(--content-primary)
+  }

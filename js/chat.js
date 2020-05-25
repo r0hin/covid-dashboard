@@ -66,9 +66,9 @@ function loadmessages() {
                         var element = postmessages[i];
 
                         a = document.createElement('div')
-                        a.classList.add('messageelement')
+                        a.classList.add('messageelementparent')
                         a.id = i + 'el'
-                        a.innerHTML = '<hr><div class="messageelement"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + ' » </b> ' + element.content + '</p></div></center></div></div>'
+                        a.innerHTML = '<hr><div class="messageelement"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + '</b><br>' + element.content + '</p></div></center></div></div>'
                         document.getElementById('messages').appendChild(a)
                         
                     }
@@ -78,7 +78,7 @@ function loadmessages() {
             }
 
             else {
-                if (doc.data().messages.length < 20) {
+                if (doc.data().messages.length < 21) {
                     element = doc.data().messages[doc.data().messages.length - 1]
                     idi = doc.data().messages.length - 1
                 }
@@ -94,16 +94,19 @@ function loadmessages() {
 
                 a.classList.add('animated')
                 a.classList.add('fadeInUp')
-                a.innerHTML = '<hr class="animated zoomIn"><div class="messageelement animated fadeInUp"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + ' » </b> ' + element.content + '</p></div></center></div></div>'
+                a.classList.add('messageelementparent')
+
+                a.innerHTML = '<hr class="animated zoomIn"><div class="messageelement animated fadeInUp"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + '</b><br>' + element.content + '</p></div></center></div></div>'
 
                 document.getElementById('messages').appendChild(a)
                 addWaves()
                 resizeChat()
 
-                if (postmessages.length > 20) {
+                postmessages = doc.data().messages
+                if (doc.data().messages.length > 21) {
                     sessionStorage.setItem('skiparefresh', 'yesyes')
 
-                    db.collection('chatroom').doc(id).update({
+                    db.collection('app').doc("chatroom").update({
                         messages: firebase.firestore.FieldValue.arrayRemove({
                             timestamp: postmessages[0].timestamp,
                             senderuid: postmessages[0].senderuid,
@@ -114,19 +117,19 @@ function loadmessages() {
                     }).then(function () {
                         $('#0el').remove()
 
-                        msgels = document.getElementsByClassName('messageelement')
+                        msgels = document.getElementsByClassName('messageelementparent')
                         var msgels = [].slice.call(msgels);
 
                         for (let i = 0; i < msgels.length; i++) {
                             const element = msgels[i];
-                            oldoldid = element.id
-                            oldid = element.id.split("el")[0]
-
-                            newid = parseInt(oldid) - 1
-                            i = newid
-                            id = id
-
-                            document.getElementById(oldoldid).id = newid + 'el'
+                            try {
+                                oldoldid = element.id
+                                oldid = element.id.split("el")[0]
+                                newid = parseInt(oldid) - 1
+                                document.getElementById(oldoldid).id = newid + 'el'   
+                            } catch (error) {
+                                console.log(i);
+                            }
                         }
                     })
                 }
