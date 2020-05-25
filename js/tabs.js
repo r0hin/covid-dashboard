@@ -15,7 +15,6 @@ $(window).ready(function () {
         sessionStorage.setItem('fullInfo', urlParams.get('fullscreen'))
         sessionStorage.setItem('viewUser', urlParams.get('user'))
         document.getElementById('home-tab').click()
-        checkUrls()
         
     }
     else {
@@ -40,7 +39,7 @@ function tabe(tab) {
 
 
     Waves.ripple('#' + tab + '-tab');
-    history.pushState(null, '', '/new.html?tab=' + tab);
+    history.pushState(null, null, '/covid-19-dashboard/new.html?tab=' + tab);
 
     val = sessionStorage.getItem('first-time-' + tab)
     if (val == 'true') {
