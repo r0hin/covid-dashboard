@@ -1,5 +1,3 @@
-window.dark = false
-
 function initMap() {
     var map;
     var marker;
@@ -48,6 +46,7 @@ function initMap() {
   }
   
   function getStyles() {
+    dark = localStorage.getItem('quicker')
     if (dark) {
         $('#mapdarkmodeindicator').html('Dark')
         array = [
