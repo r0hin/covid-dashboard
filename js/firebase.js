@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         loadprofile(true)
     } else {
         window.setTimeout(function() {
-            Snackbar.show({text: "We strongly suggest you create an account to utilize all our features :D"})
+            Snackbar.show({text: "We strongly suggest you create an account to utilize all our features :D", pos: 'top-center'})
         }, 1000)
         window.user = false
         loadprofile(false)
@@ -119,7 +119,7 @@ $('#musicbtn').show()
 function settings() {
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.'})
+        Snackbar.show({text: 'You are not signed in.', pos: 'top-center'})
         return true;
     }
 

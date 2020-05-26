@@ -10,7 +10,7 @@ function addMessage() {
     backupmessage = document.getElementById('msgbox').value
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.'})
+        Snackbar.show({text: 'You are not signed in.', pos: 'top-center'})
         return true;
     }
     else {
