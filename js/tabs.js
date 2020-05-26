@@ -1,6 +1,6 @@
 bam = window.location.href
 if (bam.includes('rohin12.gitlab.io')) {
-    window.location.replace('https://cdash.info/')
+    window.location.replace('https://cdash.site/')
 }
 
 $(window).ready(function () {
