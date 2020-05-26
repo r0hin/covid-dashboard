@@ -12,7 +12,7 @@ function addMessage() {
     backupmessage = document.getElementById('msgbox').value
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
+        Snackbar.show({text: 'You are not signed in.', backgroundColor: "var(--bg-secondary)", textColor: "var(--content-primary)" })
         return true;
     }
     else {
@@ -20,7 +20,7 @@ function addMessage() {
     }
 
     if (newmessage = '') {
-        snackbar('You must include content.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)")
+        snackbar('You must include content.')
     }
 
     else {

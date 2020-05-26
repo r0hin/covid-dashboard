@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         loadprofile(true)
     } else {
         window.setTimeout(function() {
-            Snackbar.show({text: "We strongly suggest you create an account to utilize all our features :D", backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
+            Snackbar.show({text: "We strongly suggest you create an account to utilize all our features :D", backgroundColor: "var(--bg-secondary)", textColor: "var(--content-primary)"})
         }, 1000)
         window.user = false
         loadprofile(false)
@@ -118,7 +118,7 @@ $('#musicbtn').show()
 function settings() {
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.',backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
+        Snackbar.show({text: 'You are not signed in.',backgroundColor: "var(--bg-secondary)", textColor: "var(--content-primary)"})
         return true;
     }
 
