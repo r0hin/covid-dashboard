@@ -47,7 +47,7 @@ function initMap() {
   
   function getStyles() {
     dark = localStorage.getItem('quicker')
-    if (dark) {
+    if (dark == 'true') {
         $('#mapdarkmodeindicator').html('Dark')
         array = [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
