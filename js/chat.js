@@ -5,12 +5,14 @@ document.getElementById('msgbox').addEventListener("keyup", function(event) {
     }
 })
 
+ //Snackbar.show({text: "text", backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})//
+
 function addMessage() {
     newmessage = document.getElementById('msgbox').value
     backupmessage = document.getElementById('msgbox').value
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.'})
+        Snackbar.show({text: 'You are not signed in.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
         return true;
     }
     else {
@@ -18,7 +20,7 @@ function addMessage() {
     }
 
     if (newmessage = '') {
-        snackbar('You must include content.')
+        snackbar('You must include content.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)")
     }
 
     else {

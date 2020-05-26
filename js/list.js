@@ -94,7 +94,7 @@ function star(id, elei) {
         db.collection('users').doc(user.uid).update({
             favs: firebase.firestore.FieldValue.arrayUnion(id)
         }).then(function() {
-            Snackbar.show({text: id + ' pinned successfully.'})
+            Snackbar.show({text: id + ' pinned successfully.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
             elei.onclick = function() {
                 unstar(id, this)
             }
@@ -105,7 +105,7 @@ function star(id, elei) {
 
     }
     else {
-        Snackbar.show({text: "You must be signed in to use this feature."})
+        Snackbar.show({text: "You must be signed in to use this feature.", backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
     }
 }
 function unstar(id, elei) {
@@ -114,7 +114,7 @@ function unstar(id, elei) {
         db.collection('users').doc(user.uid).update({
             favs: firebase.firestore.FieldValue.arrayRemove(id)
         }).then(function() {
-            Snackbar.show({text: id + ' unpinned successfully.'})
+            Snackbar.show({text: id + ' unpinned successfully.', backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
             elei.onclick = function() {
                 star(id, this)
             }
@@ -128,6 +128,6 @@ function unstar(id, elei) {
 
     }
     else {
-        Snackbar.show({text: "You must be signed in to use this feature."})
+        Snackbar.show({text: "You must be signed in to use this feature.", backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})
     }
 }
