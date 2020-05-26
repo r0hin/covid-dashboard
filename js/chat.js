@@ -5,14 +5,12 @@ document.getElementById('msgbox').addEventListener("keyup", function(event) {
     }
 })
 
- //Snackbar.show({text: "text", backgroundColor: "var(--bg-primary)", textColor: "var(--content-primary)"})//
-
 function addMessage() {
     newmessage = document.getElementById('msgbox').value
     backupmessage = document.getElementById('msgbox').value
 
     if (user.uid == undefined || user.uid == null) {
-        Snackbar.show({text: 'You are not signed in.', backgroundColor: "var(--bg-secondary)", textColor: "var(--content-primary)" })
+        Snackbar.show({text: 'You are not signed in.'})
         return true;
     }
     else {
