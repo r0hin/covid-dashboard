@@ -1,7 +1,10 @@
 $(window).ready(function () {
+    openNav2()
 
     sessionStorage.setItem('first-time-home', 'true')
-    sessionStorage.setItem('first-time-data', 'true')
+    sessionStorage.setItem('first-time-map', 'true')
+    sessionStorage.setItem('first-time-news', 'true')
+    sessionStorage.setItem('first-time-list', 'true')
     // ADD THIS FOR EACH TAB ADDED 👀
 
     var urlParams = new URLSearchParams(window.location.search);
@@ -10,10 +13,6 @@ $(window).ready(function () {
     if (tab == null || tab == undefined) {
 
         urlParams = new URLSearchParams(window.location.search);
-        sessionStorage.setItem('viewPost', urlParams.get('post'))
-        sessionStorage.setItem('viewInfo', urlParams.get('info'))
-        sessionStorage.setItem('fullInfo', urlParams.get('fullscreen'))
-        sessionStorage.setItem('viewUser', urlParams.get('user'))
         document.getElementById('home-tab').click()
         
     }
@@ -47,24 +46,25 @@ function tabe(tab) {
 
         switch (tab) {
             case "home":
-                // Load home stuff
-                break;
-            case "data":
-                // Load data stuff
                 break;
             case "map":
-                // Load map stuff
+                resizeChat()
+                closeNav()
+
+                interval = window.setInterval(function () {
+                if (typeof (google) != "undefined" && typeof (google) != null) {clearInterval(interval);initMap()}
+                }, 200);
+                // Run initMap() when var "Google" is defined
+
                 break;
             case "news":
-                // Load news stuff
+                checkNews()
                 break;
             case "list":
-                // Load list stuff
+                loadlist()
                 break;
             case "info":
-                // Load info stuff
                 break;
-
             default:
                 break;
         }
@@ -80,6 +80,7 @@ function openNav() {
     document.getElementById('chatbtn').onclick = function() {
         closeNav()
     }
+    resizeChat()
   }
   
   function closeNav() {
@@ -90,5 +91,26 @@ function openNav() {
     document.getElementById('chatbtn').classList.remove('chatbtnactive')
     document.getElementById('chatbtn').onclick = function() {
         openNav()
+    }
+  }
+
+  function openNav2() {
+    document.getElementById("popout2").style.height = "138px";
+    document.getElementById("tabs").style.marginBottom = "138px";
+    document.getElementById('musicbtnicon').innerHTML = 'keyboard_arrow_down'
+    document.getElementById('musicbtn').classList.add('musicbtnactive')
+    document.getElementById('musicbtn').onclick = function() {
+        closeNav2()
+    }
+    resizeChat()
+  }
+  
+  function closeNav2() {
+    document.getElementById("popout2").style.height = "0";
+    document.getElementById("tabs").style.marginBottom= "0";
+    document.getElementById('musicbtnicon').innerHTML = 'keyboard_arrow_up'
+    document.getElementById('musicbtn').classList.remove('musicbtnactive')
+    document.getElementById('musicbtn').onclick = function() {
+        openNav2()
     }
   }

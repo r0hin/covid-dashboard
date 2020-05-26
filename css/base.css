@@ -8,7 +8,9 @@
     --content-primary: #fff;
     --content-secondary: #6B66A3;
     --contrast-primary: #000;
+    --list-item-one: rgb(229, 255, 0);
 } 
+
 
 html, body { height: 100%; }
 

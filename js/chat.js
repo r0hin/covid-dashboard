@@ -93,10 +93,10 @@ function loadmessages() {
                 a.id = idi + 'el'
 
                 a.classList.add('animated')
-                a.classList.add('fadeInUp')
+                a.classList.add('zoomIn')
                 a.classList.add('messageelementparent')
 
-                a.innerHTML = '<hr class="animated zoomIn"><div class="messageelement animated fadeInUp"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + '</b><br>' + element.content + '</p></div></center></div></div>'
+                a.innerHTML = '<hr class="animated zoomIn"><div class="messageelement animated fadeIn"><img src="' + element.senderpic + '" class="centeredy pfp2"> <div class="chatdivider1"><center><div class="chattext"><p class="chattext2"><b class="chattext3">' + element.sendername + '</b><br>' + element.content + '</p></div></center></div></div>'
 
                 document.getElementById('messages').appendChild(a)
                 addWaves()
@@ -141,9 +141,16 @@ function loadmessages() {
 
 function resizeChat() {
     divheight = $('#messages').closest('.marginshit').height()
+    parentheight = divheight
+    parentheight = parseInt(parentheight) - 120
     divheight = parseInt(divheight) - 215
-    document.getElementById('messages').style.height = divheight + 'px'
+    $("#messages").css("height", divheight + 'px');
+    $('#mapel').attr('style', function(i,s) { return (s || '') + 'height: ' + parentheight + 'px !important;' });
+
+
     var objDiv = document.getElementById("messages");
     objDiv.scrollTop = objDiv.scrollHeight;
+
+    
 }
 
