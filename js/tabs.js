@@ -38,7 +38,7 @@ function tabe(tab) {
 
 
     Waves.ripple('#' + tab + '-tab');
-    history.pushState(null, null, '/covid-19-dashboard/new.html?tab=' + tab);
+    history.pushState(null, null, '/covid-19-dashboard/app.html?tab=' + tab);
 
     val = sessionStorage.getItem('first-time-' + tab)
     if (val == 'true') {
