@@ -138,11 +138,13 @@
 
 </div></div>
 
-<button style="transition: all 0.5s !important;" id="musicbtn" class="eon-text musicbtn musicbtnactive" onclick="closeNav2()"><i class="material-icons">library_music</i><i id="musicbtnicon" class="material-icons">keyboard_arrow_up</i></button>
+<button style="transition: all 0.5s !important;" id="musicbtn" class="eon-text animated zoomIn fadeIn musicbtn musicbtnactive" onclick="closeNav2()"><i class="material-icons">library_music</i><i id="musicbtnicon" class="material-icons">keyboard_arrow_up</i></button>
 <div style="height: 0px; display: none;" class="popout2 popout2padding animated zoomIn card centeredx shadow" id="popout2">
     <div class="card-body">
-        <center><h4 class="content">CV Dash Radio</h4><p style="line-height: 0; margin: 0;" class="content2">You can disable this in settings</p><br></center>
+        <br><br>
+        <center><h4 class="content">CV Dash Radio</h4><p style="line-height: 0; margin: 0;" class="content2">Now Playing: Theme Song</p><br></center>
     <div id="music"><audio id="player" style="outline: none;" autoplay controls>Unsupported Audio</audio></div>
+    <center style="padding-top: 2px;"><small>Notice: You can disable autoplay in settings</small></center>
 </div>
 </div>
 
@@ -151,7 +153,48 @@
         <div aria-labelledby="home-tab" class="tab-pane fade" id="home" role="tabpanel">
 
             <h1>Home</h1>
-            <img src="assets/virus.png" class="home-img animated pulse infinite" alt="">
+            
+            <div class="row">
+                <div class="col-sm">
+                    <img src="assets/virus.png" class="home-img animated pulse infinite" alt="">    
+                </div>
+                <div class="col-sm">
+                    <br><br><br>
+                    <h2>
+                        <b>COVID-19 Dashboard</b>
+                    </h2>
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <h4><b>Global Bulletin</b></h4>
+            <center>
+            <div style="display: inline-block; padding: 6px;">
+                <div class="card">
+                    <div class="card-body">
+                        <center>
+                            <h1 id="globalcases">...</h1>
+                            <p>Global Active Cases</p>
+                            <p class="content2" id="globalcasestime">Updated on ...</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: inline-block; padding: 6px;">
+                <div class="card">
+                    <div class="card-body">
+                        <center>
+                            <h1 id="globaldeaths">...</h1>
+                            <p>Global Total Deaths</p>
+                            <p class="content2" id="globaldeathstime">Updated on ...</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </center>
 
         </div>
         <div aria-labelledby="map-tab" class="tab-pane fade" id="map" role="tabpanel">
@@ -193,6 +236,32 @@
         <div aria-labelledby="info-tab" class="tab-pane fade" id="info" role="tabpanel">
 
             <h1>Info</h1>
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing pandemic of coronavirus disease 2019 (COVID‑19), caused by severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2).
+                        <br><br>
+                        The outbreak was first identified in Wuhan, China, in December 2019. The World Health Organization declared the outbreak a public health emergency of international concern on 30 January, and a pandemic on 11 March. 
+                        <br><br>
+                        As of 26 May 2020, more than 5.49 million cases of COVID-19 have been reported in more than 188 countries and territories, resulting in more than 346,000 deaths. More than 2.23 million people have recovered from the virus.
+                        <br><br>
+                        Common symptoms include fever, cough, fatigue, shortness of breath, and loss of sense of smell. Complications may include pneumonia and acute respiratory distress syndrome. The time from exposure to onset of symptoms is typically around five days but may range from two to fourteen days.
+                    </p>
+                    <p><b>All information here is directly sourced from <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="_blank">wikipedia</a> and summarized using <a href="https://github.com/William-Banquier" target="_blank">Will Banquer's</a> <a href="https://pastebin.com/raw/aj9XUQZs" target="_blank">Wikipedia Summarizer</a>. View <a target="_blank" href="https://pastebin.com/raw/PxnsiBmc">view academic source</a>.</b></p>
+
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Website Info</h3>
+                    <p>
+                        All documentation and writeup of this website is located <a target="_blank" href="https://zoonk.surf/i?s=vBXfgj0sl4vbz93DK5tc">here</a>
+                    </p>
+
+                </div>
+            </div>
+
 
         </div>
     </div>

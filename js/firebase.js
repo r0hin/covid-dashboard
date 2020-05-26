@@ -14,19 +14,14 @@ db = firebase.firestore()
 firebase.auth().onAuthStateChanged(function (user) {
     loadmessages()
     if (user) {
-
         window.user = firebase.auth().currentUser
         loadprofile(true)
-
     } else {
         window.setTimeout(function() {
             Snackbar.show({text: "We strongly suggest you create an account to utilize all our features :D"})
         }, 1000)
         window.user = false
         loadprofile(false)
-
-        
-
     }
 });
 
@@ -54,7 +49,6 @@ function loadprofile(status) {
         document.getElementById('pfp1').src = user.photoURL
         document.getElementById('pfptext').innerHTML = user.displayName
 
-
     db.collection('users').doc(user.uid).get().then(function(doc) {
         if (!doc.exists) {
             db.collection('users').doc(user.uid).set({
@@ -81,8 +75,6 @@ function loadprofile(status) {
         document.getElementById('usercardtrue').style.display = 'none'
         document.getElementById('usercardfalse').style.display = 'block'
     }
-
-
 }
 
 $(function () {
@@ -184,4 +176,36 @@ function refreshprefs() {
             godark()
         }
     })
+}
+
+function homestats() {
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": "f25776e273mshdeac69e2098339fp19fd7bjsne2f245613497"
+        }
+    }
+    
+    $.ajax(settings).done(function (response) {
+        response = JSON.parse(response)
+        document.getElementById('globalcases').innerHTML = intToString(parseInt(response.active_cases.replace(/,/g, '')))
+        document.getElementById('globalcasestime').innerHTML = 'Updated on ' + response.statistic_taken_at
+        document.getElementById('globaldeaths').innerHTML = intToString(parseInt(response.total_deaths.replace(/,/g, '')))
+        document.getElementById('globaldeathstime').innerHTML = 'Updated on ' + response.statistic_taken_at
+    });
+
+}
+
+function intToString (value) {
+    var suffixes = ["", "k", "m", "b","t"];
+    var suffixNum = Math.floor((""+value).length/3);
+    var shortValue = parseFloat((suffixNum != 0 ? (value / Math.pow(1000,suffixNum)) : value).toPrecision(2));
+    if (shortValue % 1 != 0) {
+        shortValue = shortValue.toFixed(1);
+    }
+    return shortValue+suffixes[suffixNum];
 }

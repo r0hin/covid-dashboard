@@ -23,6 +23,7 @@
 
 .tabs {
     width: 100%;
+    margin-right: 24px !important;
 }
 
 
@@ -74,6 +75,7 @@
     position: fixed !important;
     z-index: 1;
     padding: 0px;
+    overflow-y: hidden;
     overflow-x: hidden;
     transition: 0.5s;
     border-radius: 36px;
@@ -132,7 +134,7 @@
     position: fixed !important;
     bottom: 0px;
     transform: translate(-50%,-50%);
-    right: 62% !important;
+    left: 50% !important;
     
     z-index: 200;
     transition: all 1.5s !important;
@@ -144,9 +146,10 @@
 
   .musicbtnactive {
     z-index: 200;
-    bottom: 86px !important;
+    transform: translate(-50%,-50%);
+    bottom: 130px !important;
     position: fixed !important;
-    right: 62% !important;
+    left: 50% !important;
   }
 
   .marginshit {
@@ -346,8 +349,8 @@
 }
 
 .home-img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   -webkit-animation-name: spin;
   -webkit-animation-duration: 16000ms;
   -webkit-animation-iteration-count: infinite;

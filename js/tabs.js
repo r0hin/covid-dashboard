@@ -46,19 +46,18 @@ function tabe(tab) {
 
         switch (tab) {
             case "home":
+                homestats()
                 break;
             case "map":
                 resizeChat()
                 closeNav()
-
                 interval = window.setInterval(function () {
                 if (typeof (google) != "undefined" && typeof (google) != null) {clearInterval(interval);initMap()}
                 }, 200);
-                // Run initMap() when var "Google" is defined
-
                 break;
             case "news":
                 checkNews()
+                resizeAllGridItems()
                 break;
             case "list":
                 loadlist()
@@ -95,8 +94,8 @@ function openNav() {
   }
 
   function openNav2() {
-    document.getElementById("popout2").style.height = "138px";
-    document.getElementById("tabs").style.marginBottom = "138px";
+    document.getElementById("popout2").style.height = "184px";
+    document.getElementById("tabs").style.marginBottom = "184px";
     document.getElementById('musicbtnicon').innerHTML = 'keyboard_arrow_down'
     document.getElementById('musicbtn').classList.add('musicbtnactive')
     document.getElementById('musicbtn').onclick = function() {
