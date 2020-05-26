@@ -72,6 +72,7 @@ function loadprofile(status) {
 
     }
     else {
+        getmusic(false)
         document.getElementById('usercardtrue').style.display = 'none'
         document.getElementById('usercardfalse').style.display = 'block'
     }
