@@ -96,8 +96,7 @@ switch (musicindex) {
         file = 'halseygasolineoscartrapremix'
         break;
     case 1:
-        file = 'starsettelepathicacoustic'
-        break;
+        file = 'unknown'
     case 2:
         file = 'levianthbreath'
         break;
