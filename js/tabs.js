@@ -1,3 +1,8 @@
+bam = window.location.href
+if (bam.includes('rohin12.gitlab.io')) {
+    window.location.replace('https://cdash.info/')
+}
+
 $(window).ready(function () {
     openNav2()
 
@@ -38,7 +43,7 @@ function tabe(tab) {
 
 
     Waves.ripple('#' + tab + '-tab');
-    history.pushState(null, null, '/covid-19-dashboard/app.html?tab=' + tab);
+    history.pushState(null, null, '?tab=' + tab);
 
     val = sessionStorage.getItem('first-time-' + tab)
     if (val == 'true') {
