@@ -1,5 +1,5 @@
 bam = window.location.href
-if (bam.includes('rohin12.gitlab.io')) {
+if (bam.includes('y9colab.gitlab.io')) {
     window.location.replace('https://cdash.site/')
 }
 
