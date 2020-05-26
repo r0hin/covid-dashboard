@@ -392,3 +392,9 @@
 .fixbtn {
   min-width: 2px !important;
 }
+
+.newsbanner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
