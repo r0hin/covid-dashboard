@@ -52,8 +52,10 @@ function tabe(tab) {
         switch (tab) {
             case "home":
                 homestats()
+                window.clearInterval(interval)
                 break;
             case "map":
+                window.clearInterval(interval)
                 resizeChat()
                 closeNav()
                 interval = window.setInterval(function () {
@@ -65,11 +67,14 @@ function tabe(tab) {
                 resizeAllGridItems()
                 break;
             case "list":
+                window.clearInterval(interval)
                 loadlist()
                 break;
             case "info":
+                window.clearInterval(interval)
                 break;
             default:
+                window.clearInterval(interval)
                 break;
         }
     }

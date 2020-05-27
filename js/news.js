@@ -47,9 +47,9 @@ function buildNews(NEWS) {
             document.getElementById('articles').appendChild(e)                    
         }
         addWaves()
-        window.setInterval(function() {
+        interval = window.setInterval(function() {
             resizeAllGridItems()
-        }, 3000)
+        }, 500)
 }
 
 function viewArticle(num) {
