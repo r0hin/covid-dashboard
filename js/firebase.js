@@ -200,12 +200,15 @@ function homestats() {
 
 }
 
-function intToString (value) {
-    var suffixes = ["", "k", "m", "b","t"];
-    var suffixNum = Math.floor((""+value).length/3);
-    var shortValue = parseFloat((suffixNum != 0 ? (value / Math.pow(1000,suffixNum)) : value).toPrecision(2));
-    if (shortValue % 1 != 0) {
-        shortValue = shortValue.toFixed(1);
-    }
-    return shortValue+suffixes[suffixNum];
+function intToString (num) {
+    fixed = 0
+    if (num === null) { return null; } // terminate early
+    if (num === 0) { return '0'; } // terminate early
+    fixed = (!fixed || fixed < 0) ? 0 : fixed; // number of decimal places to show
+    var b = (num).toPrecision(2).split("e"), // get power
+        k = b.length === 1 ? 0 : Math.floor(Math.min(b[1].slice(1), 14) / 3), // floor at decimals, ceiling at trillions
+        c = k < 1 ? num.toFixed(0 + fixed) : (num / Math.pow(10, k * 3) ).toFixed(1 + fixed), // divide by power
+        d = c < 0 ? c : Math.abs(c), // enforce -0 is 0
+        e = d + ['', 'K', 'M', 'B', 'T'][k]; // append power
+    return e;
 }
