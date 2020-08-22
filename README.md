@@ -2,4 +2,4 @@
 
 Covid-19 Dashboard Webpage
 
-[Link to product](https://y9colab.gitlab.io/covid-19-dashboard)
+[Link to product](https://cdash.site)
