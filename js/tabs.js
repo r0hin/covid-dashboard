@@ -1,8 +1,3 @@
-bam = window.location.href
-if (bam.includes('github.io')) {
-    window.location.replace('https://cdash.site/')
-}
-
 $(window).ready(function () {
     openNav2()
 
