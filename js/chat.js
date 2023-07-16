@@ -6,6 +6,9 @@ document.getElementById('msgbox').addEventListener("keyup", function(event) {
 })
 
 function addMessage() {
+    alert("Chatting is now disabled! (Project archived)");
+    return;
+    
     newmessage = document.getElementById('msgbox').value
     backupmessage = document.getElementById('msgbox').value
 
